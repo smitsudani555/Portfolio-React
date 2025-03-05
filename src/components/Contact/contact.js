@@ -1,9 +1,5 @@
 import React, { useRef } from "react";
 import './contact.css'
-import walmart from '../../assets/walmart.png'
-import microsoft from '../../assets/microsoft.png'
-import adobe from '../../assets/adobe.png'
-import facebook from '../../assets/facebook.png'
 
 import facebookIcon from '../../assets/facebook-icon.png'
 import instagram from '../../assets/instagram.png'
@@ -17,19 +13,17 @@ const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault()
-
-        emailjs.sendForm('service_2vqvkoe','template_z7hm3ok',form.current,'h8MhmFK26KLHF6IQ9Pe6G')
-        .then((result) => {
-            console.log(result.txt);
-            e.target.reset()
-            alert('Email sent!')
-            
-        },(error)=>{
-            console.log(error.txt);
-            
-        })
-    }
+        e.preventDefault();
+    
+        emailjs.sendForm('service_2vqvkoe', 'template_l0wnzr5', form.current, 'G0ZdEEuOID3htYcPA')
+            .then((result) => {
+                console.log(result);
+                e.target.reset();
+                alert('Email sent!');
+            }, (error) => {
+                console.log(error.text); // Corrected from error.txt to error.text
+            });
+    };
 
     return(
         <section>

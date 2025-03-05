@@ -14,7 +14,8 @@ const Works = () => {
             <h2 className="worksTitle">My Portfolio</h2>
             <span className="worksDisc">
             Explore my portfolio showcasing innovative projects in Machine Learning, Full-Stack Web Development, and AI-driven solutions. Each project highlights my expertise in building intelligent, scalable, and user-friendly applications.
-            </span>            <div className="worksImgs">
+            </span>            
+            <div className="worksImgs">
                 <img src={p1} alt="Portfolio" className="worksImg"/>
                 <img src={p2} alt="Portfolio" className="worksImg"/>
                 <img src={p3} alt="Portfolio" className="worksImg"/>
@@ -28,3 +29,4 @@ const Works = () => {
     )
 }
 export default Works
+
