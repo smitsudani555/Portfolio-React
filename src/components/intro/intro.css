@@ -1,77 +1,115 @@
-#intro{
+#intro {
     height: calc(100vh - 4rem);
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.bg{
+.bg {
     position: absolute;
     top: -4rem;
     right: 0;
     z-index: -1;
     object-fit: cover;
     height: 100vh;
+    opacity: 0.9; /* Slight transparency for a premium effect */
 }
 
-.introContent{
-    height: 100vh;
-    width: 100vw;
+.introContent {
+    height: auto;
+    width: 100%;
     padding: 2rem;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    gap: 0.5rem;
+    text-align: left;
 }
 
-.hello{
-    font-size: 1.75rem;
-    font-weight: 100;
+.hello {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #ddd;
 }
 
-.introName{
+.introText {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.introName {
     color: yellow;
 }
 
-.introPara{
-    font-size: medium;
+.introPara {
+    font-size: 1rem;
     font-weight: 300;
+    color: #ccc;
+    line-height: 1.5;
 }
 
-.btn{
+.btn {
     background: white;
-    margin: 1rem 0;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.btnImg{
+.btn:hover {
+    background: #f1c40f;
+    color: black;
+    transform: scale(1.05);
+}
+
+.btnImg {
     object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
+    height: 1.2rem;
 }
 
-@media screen and (max-width:840px){
-    .bg{
+/* Responsive Styles */
+@media screen and (max-width: 840px) {
+    .bg {
         right: -10vw;
     }
-    .introContent{
-        font-size: 10vw;
+    .introContent {
+        font-size: 8vw;
+        text-align: center;
     }
-    .hello{
-        font-size: 4.5vw;
+    .hello {
+        font-size: 4vw;
     }
 }
 
-@media screen and (max-width:480px){
-    .bg{
+@media screen and (max-width: 480px) {
+    .bg {
         right: -20vw;
+        opacity: 0.8;
     }
-    
+    .introContent {
+        font-size: 7vw;
+        text-align: center;
+    }
+    .hello {
+        font-size: 4vw;
+    }
+    .introPara {
+        font-size: 0.9rem;
+    }
 }
